@@ -42,7 +42,7 @@ void LorieCompositor::start() {
 	backend_init();
 
 	wl_display_run(display);
-	putenv("XDG_RUNTIME_DIR=/data/data/com.termux.x11/files/tmp")
+	putenv("XDG_RUNTIME_DIR=/data/data/com.termux.x11/files/tmp");
 }
 
 void LorieCompositor::post(std::function<void()> f) {

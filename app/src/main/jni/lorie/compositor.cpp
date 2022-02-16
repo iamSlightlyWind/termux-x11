@@ -26,6 +26,7 @@ int proc(int fd, uint32_t mask, void *data) {
 void LorieCompositor::start() {
 	LogInit();
 	LOGV("Starting compositor");
+	putenv("XDG_RUNTIME_DIR=/data/data/com.termux.x11/files/tmp");
 	display = wl_display_create();
 	wl_display_add_socket_auto(display);
 	
@@ -42,7 +43,6 @@ void LorieCompositor::start() {
 	backend_init();
 
 	wl_display_run(display);
-	putenv("XDG_RUNTIME_DIR=/data/data/com.termux.x11/files/tmp");
 }
 
 void LorieCompositor::post(std::function<void()> f) {

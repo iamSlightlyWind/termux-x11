@@ -29,8 +29,8 @@ void LorieCompositor::start() {
 	putenv("XDG_RUNTIME_DIR=/data/data/com.termux.x11/files/termx11");
 	display = wl_display_create();
 	wl_display_add_socket_auto(display);
-	chmod("/data/data/com.termux.x11/files/termx11/wayland-0.lock", 0777);
-	chmod("/data/data/com.termux.x11/files/termx11/wayland-0", 0777);
+	//chmod("/data/data/com.termux.x11/files/termx11/wayland-0.lock", 0777);
+	//chmod("/data/data/com.termux.x11/files/termx11/wayland-0", 0777);
 	
 	wl_event_loop_add_fd(wl_display_get_event_loop(display), queue.get_fd(), WL_EVENT_READABLE, &proc, this);
 	

@@ -3,10 +3,10 @@ name: Unit tests
 on:
   push:
     branches:
-      - master
+      - temp
   pull_request:
     branches:
-      - master
+      - temp
 
 jobs:
   testing:

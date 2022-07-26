@@ -3,10 +3,10 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - temp
   pull_request:
     branches:
-      - master
+      - temp
 
 jobs:
   build:
